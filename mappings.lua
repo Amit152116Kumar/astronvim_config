@@ -29,7 +29,10 @@ return {
     },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
+    ["<leader>j"] = { require("telescope.builtin").jumplist, desc = "[J]umplist" },
+    ["<leader>m"] = { require("telescope.builtin").marks, desc = "[M]arks" },
+    ["<leader>sr"] = { ":source<CR>", desc = "Interpret File" },
+    --["<C-p"] = { ":lua require'telescope'.extensions.project.project{}<CR>", { noremap = true, silent = true } },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
@@ -37,4 +40,5 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  v = {},
 }
